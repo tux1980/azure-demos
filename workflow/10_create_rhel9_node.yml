@@ -30,7 +30,7 @@
           - path: "{{ path_public_key }}"
             key_data: "{{ public_ssh_key2 }}"
         image:
-          offer: RHEL_BYOS
-          publisher: None
-          sku: "9.1"
+          offer: RHEL
+          publisher: RedHat
+          sku: "9-gen2"
           version: latest
