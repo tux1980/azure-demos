@@ -8,7 +8,7 @@
     - name: Create virtual network interface card
       azure_rm_networkinterface:
         resource_group: "{{ resource_group_name }}"
-        name: "{{ linux_nic_name }}"
+        name: "{{ rhel01_nic_name }}"
         virtual_network: "{{ vnet_name }}"
         subnet: "{{ subnet_name }}"
         public_ip_name: "{{ linux_public_ip_name }}"
@@ -23,7 +23,7 @@
         admin_username: "{{ linux_admin_user }}"
         admin_password: "{{ linux_admin_password }}"
         managed_disk_type: "{{ disk_type }}"
-        network_interfaces: "{{ rhel_nic_name }}"
+        network_interfaces: "{{ rhel01_nic_name }}"
         ssh_public_keys:
           - path: "{{ path_public_key }}"
             key_data: "{{ public_ssh_key }}"
