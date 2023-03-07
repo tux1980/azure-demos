@@ -32,5 +32,5 @@
         image:
           offer: RHEL
           publisher: RedHat
-          sku: "9-gen2"
+          sku: "9"
           version: latest
