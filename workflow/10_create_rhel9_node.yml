@@ -17,7 +17,7 @@
     - name: Create VM
       azure_rm_virtualmachine:
         resource_group: "{{ resource_group_name }}"
-        name: "{{ centos_vm_name }}"
+        name: "{{ rhel_vm_name }}"
         os_type: Linux
         vm_size: "{{ linux_vm_size }}"
         admin_username: "{{ linux_admin_user }}"
@@ -30,7 +30,7 @@
           - path: "{{ path_public_key }}"
             key_data: "{{ public_ssh_key2 }}"
         image:
-          offer: CentOS
-          publisher: OpenLogic
-          sku: "{{ linux_vm_sku }}"
+          offer: RHEL_BYOS
+          publisher: None
+          sku: "9.1"
           version: latest
